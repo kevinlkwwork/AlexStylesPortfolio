@@ -191,39 +191,90 @@ a:hover {
 }
 
 /* Responsiveness */
+
+/* Mobile (max-width: 768px) */
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Adjusting header font size for mobile */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack navigation items vertically */
         gap: 1rem;
     }
 
     .grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    .project-thumbnail img {
-        height: auto;
+        grid-template-columns: 1fr; /* Single column grid for mobile */
     }
 
     form input, form textarea {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Adjust input and textarea font size */
+    }
+
+    .project-thumbnail img {
+        height: auto; /* Ensure images scale properly */
+    }
+
+    #about p {
+        font-size: 1rem; /* Reduce text size for smaller screens */
+        line-height: 1.6;
     }
 }
 
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
+/* Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1.1rem; /* Slightly larger font size for tablets */
     }
 
-    h2 {
-        font-size: 2rem;
+    header h1 {
+        font-size: 3rem; /* Slightly larger font size for tablets */
+    }
+
+    nav ul {
+        gap: 1.5rem; /* Adjust gap between menu items */
     }
 
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Two-column grid for tablets */
+    }
+
+    form input, form textarea {
+        font-size: 1.2rem; /* Adjust form field font size */
+    }
+
+    .project-thumbnail img {
+        height: auto; /* Keep images responsive */
+    }
+}
+
+/* Desktop (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 1.2rem; /* Larger font size for desktop */
+    }
+
+    header h1 {
+        font-size: 3.5rem; /* Larger header font size for desktop */
+    }
+
+    nav ul {
+        gap: 2rem; /* Adjust gap for desktop layout */
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Three-column grid for desktop */
+    }
+
+    .project-thumbnail img {
+        height: auto; /* Ensure images are well-scaled */
+    }
+
+    #about p {
+        font-size: 1.2rem; /* Adjust paragraph size for readability on desktop */
     }
 }
